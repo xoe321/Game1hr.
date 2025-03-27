@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://bv2aqs11vf547"]
+
+[ext_resource type="PackedScene" uid="uid://dnebq6w4kl0do" path="res://player.tscn" id="1_o38m3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tr2fe"]
+albedo_color = Color(0.672305, 1.76881e-06, 6.257e-07, 1)
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.346214, 0)
+
+[node name="Players" parent="." instance=ExtResource("1_o38m3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.37412, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.999813, 0.00685002, 0.0181164, -0.0181167, -2.50563e-05, 0.999836, 0.00684938, -0.999977, 9.90555e-05, 0, 4.91083, 0)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1.2824, 0, 0, 0, 5.94862, 0, 0, 0, 10.1589, -4.74954, -1.01167, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(30.1691, 0, 0, 0, 0.248282, 0, 0, 0, 30.1691, 0, -3.48588, 0)
+use_collision = true
+material = SubResource("StandardMaterial3D_tr2fe")
